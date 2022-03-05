@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Foundation\Application;
+use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -16,16 +16,21 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
+    return redirect()->route('dashboard');
 });
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+// User routes
+Route::middleware('auth')->group(function () {
+    Route::get('/users', [UsersController::class, 'index'])->name('users');
+    Route::get('users/create', [UsersController::class, 'create'])->name('users.create');
+    Route::post('users', [UsersController::class, 'store'])->name('users.store');
+    Route::get('users/{user}/edit', [UsersController::class, 'edit'])->name('users.edit');
+    Route::put('users/{user}', [UsersController::class, 'update'])->name('users.update');
+    Route::delete('users/{user}', [UsersController::class, 'destroy'])->name('users.destroy');
+});
 
 require __DIR__.'/auth.php';
