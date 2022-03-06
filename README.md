@@ -1,9 +1,9 @@
 ## User CRUD test by Hemerson
-This is a simple demo user management CRUD application built with Laravel, Inertia.js and React.
+This is a simple demo user management CRUD application built with Laravel, Inertia.js, Tailwind, React And Docker
 
 ## System requirements 
 - Docker Desktop
-- composer
+- PHP/composer
 
 ## Installation
 
