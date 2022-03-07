@@ -60,7 +60,7 @@ export default function Edit (props) {
                             />
                             <TextInput
                                 className="w-full pb-8 pr-6 lg:w-1/2"
-                                label="Name"
+                                label="UserName"
                                 name="username"
                                 type="text"
                                 errors={errors.username}

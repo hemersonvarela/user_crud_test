@@ -41,7 +41,7 @@ export default function Index(props) {
                                 <table className="w-full whitespace-nowrap">
                                     <thead>
                                     <tr className="font-bold text-left">
-                                        <th className="px-6 pt-5 pb-4">Username</th>
+                                        <th className="px-6 pt-5 pb-4">UserName</th>
                                         <th className="px-6 pt-5 pb-4">User Full Name</th>
                                         <th className="px-6 pt-5 pb-4">Email</th>
                                         <th className="px-6 pt-5 pb-4">Role</th>
