@@ -32,6 +32,7 @@ export default function Dashboard(props) {
                                 <li>Factories</li>
                                 <li>FormRequest</li>
                                 <li>Accessors</li>
+                                <li>Mutators</li>
                                 <li>Query Scopes</li>
                                 <li>Pagination</li>
                                 <li>Laravel Breeze</li>
