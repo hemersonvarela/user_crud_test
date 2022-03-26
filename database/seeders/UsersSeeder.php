@@ -35,7 +35,7 @@ class UsersSeeder extends Seeder
             $user->last_name = $seed['last_name'];
             $user->email = $seed['email'];
             $user->email_verified_at = now();
-            $user->password = Hash::make($seed['password']);
+            $user->password = $seed['password'];
             $user->role_id = $seed['role_id'];
             $user->save();
         }
