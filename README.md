@@ -22,6 +22,11 @@ composer install
 Setup app configuration
 ```sh
 cp .env.example .env
+asdf
+adsfas
+dfasd
+dfasdfasd
+
 ```
 
 Set a bash alias for sail
