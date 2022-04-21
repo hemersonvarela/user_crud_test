@@ -3,7 +3,6 @@ This is a simple demo user management CRUD application built with Laravel, Inert
 
 ## System requirements 
 - Docker Desktop
-- PHP/composer
 
 ## Installation
 
@@ -14,9 +13,9 @@ git clone https://github.com/hemersonvarela/user_crud_test.git
 cd user_crud_test/
 ```
 
-Install PHP dependencies
+Install PHP dependencies (composer install)
 ```sh
-composer install
+docker run --rm --interactive --tty --volume $PWD:/app composer:2.3 install
 ```
 
 Setup app configuration
